@@ -1,0 +1,122 @@
+html, body {
+    background: #F2F2F2;
+    font-size: 14px;
+}
+
+section {
+    padding: 2rem 0;
+}
+
+h3, p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    margin: 1rem;
+}
+
+.product-catelogy img {
+    width: 100%;
+}
+
+figure {
+    position: relative;
+}
+
+h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    text-transform: uppercase;
+}
+
+h3::after {
+    content: '';
+    display: block;
+    width: 50px;
+    height: 2px;
+    background: #fff;
+    margin-top: 10px;
+}
+
+p {
+    position: absolute;
+    bottom: 0;
+    right: -1rem;
+    margin-right: 3rem;
+    opacity: 0;
+    transition: all, 0.5s;
+}
+
+p::after {
+    content: '';
+    display: block;
+    width: 25px;
+    height: 2px;
+    background: #fff;
+    margin-top: 10px;
+    transform: rotate(90deg);
+    position: absolute;
+    right: -2rem;
+    top: 0rem;
+    opacity: 0;
+    transition: all, 0.5s;
+}
+
+.item:hover p, .item:hover p::after {
+    opacity: 1;
+}
+
+.item:hover p {
+    right: 0;
+}
+
+img {
+    transition: all, 0.5s
+}
+
+.item:hover img, .item:active img {
+    transform: scale3d(1.2, 1.2, 1)
+}
+
+.item:hover .box-img::after {
+    opacity: 1;
+}
+
+.box-img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+}
+
+.box-img::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0, .3);
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: all, 0.5s
+}
+
+
+.item__small {
+    height: 265px;
+    overflow: hidden;
+    margin-bottom: 30px;
+}
+
+
+/* mobile */
+
+@media only screen and (max-width: 780px) {
+    section {
+        padding: 2rem 0;
+    }
+
+    .item__small {
+        height: 100%;
+    }
+}
